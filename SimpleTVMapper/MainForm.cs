@@ -42,7 +42,7 @@ namespace SimpleTVMapper
                 {
                     string origSeason = DetermineSeason(s);
                     string origEpisode = DetermineEpisode(s);
-                    string origTitle = DetermineTitle(s);
+                    string origTitle = DetermineTitle(s, library.Name);
                     string origExtension = Path.GetExtension(s);
                     string newSeason = "";
                     string newEpisode = origEpisode;
@@ -168,11 +168,19 @@ namespace SimpleTVMapper
             }
         }
 
-        private static string DetermineTitle(string filename)
+        private static string DetermineTitle(string filename, string libraryName)
         {
             String sanitizedFilename = Regex.Replace(Path.GetFileNameWithoutExtension(filename), "\\[(.*?)\\]", "").Trim();
-            Match showTitleMatch;
-            showTitleMatch = Regex.Match(sanitizedFilename, ".*(?=( - ))");
+            Match showTitleMatch = null;
+
+            if ( libraryName == "Anime TV" )
+            {
+                showTitleMatch = Regex.Match(sanitizedFilename, ".*(?=( - ))");
+            }
+            else if ( libraryName == "TV" )
+            {
+                showTitleMatch = Regex.Match(sanitizedFilename, @".*(?=(S\d\d))");
+            }
 
             if (showTitleMatch.Success)
             {
