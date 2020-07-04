@@ -31,8 +31,14 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lstFiles = new System.Windows.Forms.ListView();
-            this.colOrig = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colNew = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colOrigPath = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colOrigTitle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colOrigSeason = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colOrigEpisode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colNewPath = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colNewTitle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colNewSeason = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colNewEpisode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnRename = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
@@ -53,7 +59,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(983, 450);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -62,32 +68,63 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(794, 409);
+            this.panel1.Size = new System.Drawing.Size(977, 409);
             this.panel1.TabIndex = 0;
             // 
             // lstFiles
             // 
             this.lstFiles.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.colOrig,
-            this.colNew});
+            this.colOrigPath,
+            this.colOrigTitle,
+            this.colOrigSeason,
+            this.colOrigEpisode,
+            this.colNewPath,
+            this.colNewTitle,
+            this.colNewSeason,
+            this.colNewEpisode});
             this.lstFiles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstFiles.FullRowSelect = true;
             this.lstFiles.HideSelection = false;
             this.lstFiles.Location = new System.Drawing.Point(0, 0);
             this.lstFiles.Name = "lstFiles";
-            this.lstFiles.Size = new System.Drawing.Size(794, 409);
+            this.lstFiles.Size = new System.Drawing.Size(977, 409);
             this.lstFiles.TabIndex = 0;
             this.lstFiles.UseCompatibleStateImageBehavior = false;
             this.lstFiles.View = System.Windows.Forms.View.Details;
             // 
-            // colOrig
+            // colOrigPath
             // 
-            this.colOrig.Text = "Original";
-            this.colOrig.Width = 250;
+            this.colOrigPath.Text = "Original";
+            this.colOrigPath.Width = 250;
             // 
-            // colNew
+            // colOrigTitle
             // 
-            this.colNew.Text = "New";
-            this.colNew.Width = 250;
+            this.colOrigTitle.Text = "T";
+            // 
+            // colOrigSeason
+            // 
+            this.colOrigSeason.Text = "S";
+            // 
+            // colOrigEpisode
+            // 
+            this.colOrigEpisode.Text = "E";
+            // 
+            // colNewPath
+            // 
+            this.colNewPath.Text = "New";
+            this.colNewPath.Width = 250;
+            // 
+            // colNewTitle
+            // 
+            this.colNewTitle.Text = "T";
+            // 
+            // colNewSeason
+            // 
+            this.colNewSeason.Text = "S";
+            // 
+            // colNewEpisode
+            // 
+            this.colNewEpisode.Text = "E";
             // 
             // panel2
             // 
@@ -96,7 +133,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 418);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(794, 29);
+            this.panel2.Size = new System.Drawing.Size(977, 29);
             this.panel2.TabIndex = 1;
             // 
             // btnRename
@@ -125,10 +162,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(983, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "MainForm";
             this.Text = "SimpleTVMapper";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -145,8 +183,14 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnRename;
         private System.Windows.Forms.Button btnRefresh;
-        private System.Windows.Forms.ColumnHeader colOrig;
-        private System.Windows.Forms.ColumnHeader colNew;
+        private System.Windows.Forms.ColumnHeader colOrigPath;
+        private System.Windows.Forms.ColumnHeader colOrigTitle;
+        private System.Windows.Forms.ColumnHeader colOrigSeason;
+        private System.Windows.Forms.ColumnHeader colOrigEpisode;
+        private System.Windows.Forms.ColumnHeader colNewPath;
+        private System.Windows.Forms.ColumnHeader colNewTitle;
+        private System.Windows.Forms.ColumnHeader colNewSeason;
+        private System.Windows.Forms.ColumnHeader colNewEpisode;
     }
 }
 

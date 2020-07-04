@@ -52,13 +52,19 @@ namespace SimpleTVMapper
 
                     FileMapping m = mappingList.Find(x => x.originalTitle.Equals(origTitle));
 
-                    string[] saLvwItem = new string[2];
+                    string[] saLvwItem = new string[8];
                     saLvwItem[0] = s;
-                    saLvwItem[1] = "";
+                    saLvwItem[1] = origTitle;
+                    saLvwItem[2] = origSeason;
+                    saLvwItem[3] = origEpisode;
+                    saLvwItem[4] = "";
+                    saLvwItem[5] = "";
+                    saLvwItem[6] = "";
+                    saLvwItem[7] = "";
 
                     if (m == null)
                     {
-                        saLvwItem[1] = "NOMAPPING";
+                        saLvwItem[4] = "NOMAPPING";
                     }
                     else
                     {
@@ -86,11 +92,14 @@ namespace SimpleTVMapper
                         string newFileNameFullPath = newFilePath + @"\" + newTitle + @"\" + "Season " + newSeason + @"\" + plexifiedNewTitle + ".S" + newSeason + "E" + newEpisode + newExtension;
                         string newFilePathWithSubfolder = newFilePath + @"\" + newTitle + @"\" + "Season " + newSeason;
 
-                        saLvwItem[1] = newFileNameFullPath;
+                        saLvwItem[4] = newFileNameFullPath;
+                        saLvwItem[5] = newTitle;
+                        saLvwItem[6] = newSeason;
+                        saLvwItem[7] = newEpisode;
                     }
                     ListViewItem lvi = new ListViewItem(saLvwItem);
                     lstFiles.Items.Add(lvi);
-                    for( int i = 0; i < lstFiles.Columns.Count; i++)
+                    for (int i = 0; i < lstFiles.Columns.Count; i++)
                     {
                         lstFiles.Columns[i].AutoResize(ColumnHeaderAutoResizeStyle.ColumnContent);
                     }
@@ -202,18 +211,19 @@ namespace SimpleTVMapper
 
         private void btnRename_Click(object sender, EventArgs e)
         {
-            foreach( ListViewItem lvi in lstFiles.Items)
+            this.Enabled = false;
+            foreach ( ListViewItem lvi in lstFiles.Items)
             {
-                if (lvi.SubItems[1].Text != "NOMAPPING")
+                if (lvi.SubItems[4].Text != "NOMAPPING")
                 {
-                    string newDir = Path.GetDirectoryName(@lvi.SubItems[1].Text);
+                    string newDir = Path.GetDirectoryName(@lvi.SubItems[4].Text);
                     if (!Directory.Exists(newDir))
                     {
                         System.IO.Directory.CreateDirectory(newDir);
                     }
-                    if (!File.Exists(lvi.SubItems[1].Text))
+                    if (!File.Exists(lvi.SubItems[4].Text))
                     {
-                        System.IO.File.Move(lvi.SubItems[0].Text, lvi.SubItems[1].Text);
+                        System.IO.File.Move(lvi.SubItems[0].Text, lvi.SubItems[4].Text);
                     }
                     else
                     {
@@ -221,6 +231,7 @@ namespace SimpleTVMapper
                     }
                 }
             }
+            this.Enabled = true;
             loadAndPopulateListView();
         }
     }
