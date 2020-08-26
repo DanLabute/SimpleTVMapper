@@ -27,23 +27,128 @@ namespace SimpleTVMapper
             loadAndPopulateListView();
         }
 
+        private string sanitizeFileName(string fileName)
+        {
+            String sanitizedFilename = Regex.Replace(Path.GetFileNameWithoutExtension(fileName), @"\ \.", ".").Trim();
+            sanitizedFilename = Regex.Replace(Path.GetFileNameWithoutExtension(fileName), @"\[(.*?)\]", "").Trim();
+            return sanitizedFilename;
+        }
+
+        string determineSeason(string fileName)
+        {
+            Match seasonMatch = Regex.Match(fileName, @"[Ss](\d+)");
+            String seasonString = "";
+            if (seasonMatch.Success)
+            {
+                foreach (Group g in seasonMatch.Groups)
+                {
+                    string sanitizedSeasonVal = g.Value.Trim();
+                    if (isNumeric(sanitizedSeasonVal))
+                    {
+                        if (sanitizedSeasonVal.Length < 2)
+                        {
+                            seasonString = "0" + sanitizedSeasonVal;
+                        }
+                        else
+                        {
+                            seasonString = sanitizedSeasonVal;
+                        }
+                        break;
+                    } 
+                }
+            }
+            else
+            {
+                seasonString = "01";
+            }
+
+            if (seasonString == "00")
+            {
+                seasonString = "Specials";
+            }
+
+            return seasonString;
+        }
+
+        string determineEpisode(string fileName)
+        {
+            Match episodeMatch = Regex.Match(fileName, @"[Ee](\d+)| - (\d+)");
+            String episodeString = "";
+            if (episodeMatch.Success)
+            {
+                foreach (Group g in episodeMatch.Groups)
+                {
+                    if (isNumeric(g.Value))
+                    {
+                        if (g.Value.Length < 2)
+                        {
+                            episodeString = "0" + g.Value;
+                            break;
+                        }
+                        else
+                        {
+                            episodeString = g.Value;
+                        }
+                    }
+                }
+                return episodeString;
+            }
+            else
+            {
+                return "_";
+            }
+        }
+            
+        string determineTitle(string fileName)
+        {
+            Match showTitleMatch = null;
+
+            showTitleMatch = Regex.Match(fileName, @"^(.*?) - \d|^(.*?)[Ss]\d\d");
+
+            if (showTitleMatch.Success)
+            {
+                // Loop through groups and find the one that contains the title
+                return showTitleMatch.Groups[1].Value.Replace(".", " ").Trim();
+            }
+            else
+            {
+                return "!UNABLE TO DETERMINE SHOW TITLE";
+            }
+        }
+
+        string determineExtension(string fileName)
+        {
+            return Path.GetExtension(fileName);
+        }
+
+        bool isNumeric(string value)
+        {
+            Regex isNumeric = new Regex(@"^\d+$");
+            return isNumeric.IsMatch(value);
+        }
+
         private void loadAndPopulateListView()
         {
+
+            PathConfig pConfig = new PathConfig();
+
             lstFiles.Items.Clear();
-            List<FileLibrary> libraries = LoadLibrariesFromJson();
+
+            //List all files in directory, exclude filtered extensions
+            string[] fileList = pConfig.GetFileList(pConfig.SourcePath);
+
             List<FileMapping> mappingList = LoadMappingsFromJson();
 
-            foreach (var library in libraries)
+            //List all files in directory, exclude filtered extensions
+            foreach (string s in fileList)
             {
-                //List all files in directory, exclude filtered extensions
-                string[] libraryFileList = library.GetLibraryFileList(library.SourcePath);
-
-                foreach (string s in libraryFileList)
+                if (Regex.Match(s, pConfig.allowedFileExtensions).Length > 0)
                 {
-                    string origSeason = DetermineSeason(s);
-                    string origEpisode = DetermineEpisode(s);
-                    string origTitle = DetermineTitle(s, library.Name);
-                    string origExtension = Path.GetExtension(s);
+                    string sanitizedFileName = sanitizeFileName(s);
+                    string origSeason = determineSeason(sanitizedFileName);
+                    string origEpisode = determineEpisode(sanitizedFileName);
+                    string origTitle = determineTitle(sanitizedFileName);
+                    string origExtension = determineExtension(s);
                     string newSeason = "";
                     string newEpisode = origEpisode;
                     string newTitle = "";
@@ -72,7 +177,7 @@ namespace SimpleTVMapper
 
                         if (m.newSeason == null)
                         {
-                            newSeason = "01";
+                            newSeason = origSeason;
                         }
                         else
                         {
@@ -86,7 +191,16 @@ namespace SimpleTVMapper
                             }
                         }
 
-                        newFilePath = library.DestinationPath;
+                        if (m.episodeCountOffset != null)
+                        {
+                            newEpisode = (Int32.Parse(newEpisode) - Int32.Parse(m.episodeCountOffset)).ToString();
+                            if (newEpisode.Length == 1)
+                            {
+                                newEpisode = "0" + newEpisode;
+                            }
+                        }
+
+                        newFilePath = m.parentPath;
 
                         string plexifiedNewTitle = newTitle.Replace(' ', '.');
                         string newFileNameFullPath = newFilePath + @"\" + newTitle + @"\" + "Season " + newSeason + @"\" + plexifiedNewTitle + ".S" + newSeason + "E" + newEpisode + newExtension;
@@ -99,112 +213,18 @@ namespace SimpleTVMapper
                     }
                     ListViewItem lvi = new ListViewItem(saLvwItem);
                     lstFiles.Items.Add(lvi);
-                    for (int i = 0; i < lstFiles.Columns.Count; i++)
-                    {
-                        lstFiles.Columns[i].AutoResize(ColumnHeaderAutoResizeStyle.ColumnContent);
-                    }
                 }
             }
-        }
 
-        private static string DetermineSeason(string filename)
-        {
-            String sanitizedFilename = Regex.Replace(Path.GetFileNameWithoutExtension(filename), "\\[(.*?)\\]", "").Trim();
-            Regex isNumeric = new Regex("^\\d+$");
-            Match seasonMatch = Regex.Match(sanitizedFilename, ".*(?=([Ss](\\d+)))");
-            String seasonString = "";
-            if (seasonMatch.Success)
+            for (int i = 0; i < lstFiles.Columns.Count; i++)
             {
-                foreach (Group g in seasonMatch.Groups)
-                {
-                    if (isNumeric.IsMatch(g.Value))
-                    {
-                        if (g.Value.Length < 2)
-                        {
-                            seasonString = "0" + g.Value;
-                        }
-                        else
-                        {
-                            seasonString = g.Value;
-                        }
-                        break;
-                    }
-                }
-            }
-            else
-            {
-                seasonString = "01";
-            }
-
-            if (seasonString == "00")
-            {
-                seasonString = "Specials";
-            }
-
-            return seasonString;
-        }
-
-        private static string DetermineEpisode(string filename)
-        {
-            String sanitizedFilename = Regex.Replace(Path.GetFileNameWithoutExtension(filename), "\\[(.*?)\\]", "").Trim();
-            Regex isNumeric = new Regex("^\\d+$");
-            Match episodeMatch = Regex.Match(sanitizedFilename, ".*(?=([Ee](\\d+))|( - (\\d+)))");
-            String episodeString = "";
-            if (episodeMatch.Success)
-            {
-                foreach (Group g in episodeMatch.Groups)
-                {
-                    if (isNumeric.IsMatch(g.Value))
-                    {
-                        episodeString = g.Value;
-                        break;
-                    }
-                }
-                return episodeString;
-            }
-            else
-            {
-                return "_";
-            }
-        }
-
-        private static string DetermineTitle(string filename, string libraryName)
-        {
-            String sanitizedFilename = Regex.Replace(Path.GetFileNameWithoutExtension(filename), "\\[(.*?)\\]", "").Trim();
-            Match showTitleMatch = null;
-
-            if ( libraryName == "Anime TV" )
-            {
-                showTitleMatch = Regex.Match(sanitizedFilename, ".*(?=( - ))");
-            }
-            else if ( libraryName == "TV" )
-            {
-                showTitleMatch = Regex.Match(sanitizedFilename, @".*(?=(S\d\d))");
-            }
-
-            if (showTitleMatch.Success)
-            {
-                return showTitleMatch.Groups[0].Value.Replace(".", " ").Replace(" - ", ": ").Trim();
-            }
-            else
-            {
-                return "_";
-            }
-        }
-
-        private List<FileLibrary> LoadLibrariesFromJson()
-        {
-            using (StreamReader r = new StreamReader("config/libraries.json"))
-            {
-                string json = r.ReadToEnd();
-                List<FileLibrary> libraries = JsonConvert.DeserializeObject<List<FileLibrary>>(json);
-                return libraries;
+                lstFiles.Columns[i].AutoResize(ColumnHeaderAutoResizeStyle.ColumnContent);
             }
         }
 
         private List<FileMapping> LoadMappingsFromJson()
         {
-            using (StreamReader r = new StreamReader("config/mappings.json"))
+            using (StreamReader r = new StreamReader("mappings.json"))
             {
                 string json = r.ReadToEnd();
                 List<FileMapping> mappings = JsonConvert.DeserializeObject<List<FileMapping>>(json);

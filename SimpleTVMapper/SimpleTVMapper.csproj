@@ -52,7 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\FileLibrary.cs" />
+    <Compile Include="Classes\PathConfig.cs" />
     <Compile Include="Classes\FileMapping.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -74,8 +74,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="config\libraries.json" />
-    <None Include="config\mappings.json" />
+    <None Include="mappings.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
