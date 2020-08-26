@@ -23,6 +23,10 @@ namespace SimpleNameMapper.Classes
 
         public string newEpisode { get; set; }
 
+        public string parentPath { get; set; }
+
+        public string episodeCountOffset { get; set; }
+
         
     }
 }

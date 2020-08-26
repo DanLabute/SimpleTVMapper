@@ -4,19 +4,18 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace SimpleNameMapper.Classes
 {
-    class FileLibrary
+    class PathConfig
     {
-        public string Name { get; set; }
+        public string SourcePath = @"\\192.168.0.100\Torrents";
 
-        public string SourcePath { get; set; }
+        public string allowedFileExtensions = @".*[.mkv, .mp4]$";
 
-        public string DestinationPath { get; set; }
-
-        public string[] GetLibraryFileList(string path)
+        public string[] GetFileList(string path)
         {
             String[] directoryList = Directory.GetFiles(path, "*.*", SearchOption.AllDirectories);
 
