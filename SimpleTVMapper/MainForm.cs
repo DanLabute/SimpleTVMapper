@@ -103,16 +103,25 @@ namespace SimpleTVMapper
         {
             Match showTitleMatch = null;
 
-            showTitleMatch = Regex.Match(fileName, @"^(.*?) - \d|^(.*?)[Ss]\d\d");
+            showTitleMatch = Regex.Match(fileName, @"^(?<showNameAnime>.*?) - \d|^(?<showNameTV>.*?)[Ss]\d\d");
 
             if (showTitleMatch.Success)
             {
-                // Loop through groups and find the one that contains the title
-                return showTitleMatch.Groups[1].Value.Replace(".", " ").Trim();
+                string showTitle = "";
+                if (showTitleMatch.Groups["showNameAnime"].Value != "")
+                {
+                    showTitle = showTitleMatch.Groups["showNameAnime"].Value.Replace(".", " ").Trim();
+                }
+
+                if (showTitleMatch.Groups["showNameTV"].Value != "")
+                {
+                    showTitle = showTitleMatch.Groups["showNameTV"].Value.Replace(".", " ").Trim();
+                }
+                return showTitle.ToUpper();
             }
             else
             {
-                return "!UNABLE TO DETERMINE SHOW TITLE";
+                return "_";
             }
         }
 
