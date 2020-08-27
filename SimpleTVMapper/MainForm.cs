@@ -200,6 +200,20 @@ namespace SimpleTVMapper
                             }
                         }
 
+                        string seasonString = "";
+                        string seasonNum = "";
+
+                        if (newSeason == "Specials")
+                        {
+                            seasonString = newSeason;
+                            seasonNum = "00";
+                        }
+                        else
+                        {
+                            seasonString = "Season " + newSeason;
+                            seasonNum = newSeason;
+                        }
+
                         if (m.episodeCountOffset != null)
                         {
                             newEpisode = (Int32.Parse(newEpisode) - Int32.Parse(m.episodeCountOffset)).ToString();
@@ -212,12 +226,12 @@ namespace SimpleTVMapper
                         newFilePath = m.parentPath;
 
                         string plexifiedNewTitle = newTitle.Replace(' ', '.');
-                        string newFileNameFullPath = newFilePath + @"\" + newTitle + @"\" + "Season " + newSeason + @"\" + plexifiedNewTitle + ".S" + newSeason + "E" + newEpisode + newExtension;
+                        string newFileNameFullPath = newFilePath + @"\" + newTitle + @"\" + seasonString + @"\" + plexifiedNewTitle + ".S" + seasonNum + "E" + newEpisode + newExtension;
                         string newFilePathWithSubfolder = newFilePath + @"\" + newTitle + @"\" + "Season " + newSeason;
 
                         saLvwItem[4] = newFileNameFullPath;
                         saLvwItem[5] = newTitle;
-                        saLvwItem[6] = newSeason;
+                        saLvwItem[6] = seasonNum;
                         saLvwItem[7] = newEpisode;
                     }
                     ListViewItem lvi = new ListViewItem(saLvwItem);
