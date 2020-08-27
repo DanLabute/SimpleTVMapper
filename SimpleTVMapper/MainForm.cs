@@ -17,6 +17,9 @@ namespace SimpleTVMapper
 {
     public partial class MainForm : Form
     {
+
+        PathConfig pConfig = new PathConfig();
+
         public MainForm()
         {
             InitializeComponent();
@@ -139,8 +142,6 @@ namespace SimpleTVMapper
         private void loadAndPopulateListView()
         {
 
-            PathConfig pConfig = new PathConfig();
-
             lstFiles.Items.Clear();
 
             //List all files in directory, exclude filtered extensions
@@ -255,6 +256,27 @@ namespace SimpleTVMapper
             }
         }
 
+        private void cleanupLeftoverDirs()
+        {
+            // Get a listing of any subdirectories that remain after moving is complete
+            string[] subDirList = Directory.GetDirectories(pConfig.SourcePath);
+
+            foreach (string dir in subDirList)
+            {
+                if (Directory.Exists(dir))
+                {
+                    // Check if any files remain with types in allowlist
+                    string[] fileList = Directory.GetFiles(dir, "*.*", SearchOption.AllDirectories);
+
+                    // If no allowlist typed files remain, delete the directory
+                    if (!fileList.Any(s => Regex.IsMatch(s, pConfig.allowedFileExtensions)))
+                    {
+                        Directory.Delete(dir, true);
+                    }
+                }
+            }
+        }
+
         private void MainForm_Load(object sender, EventArgs e)
         {
             loadAndPopulateListView();
@@ -282,6 +304,9 @@ namespace SimpleTVMapper
                     }
                 }
             }
+
+            cleanupLeftoverDirs();
+
             this.Enabled = true;
             loadAndPopulateListView();
         }
