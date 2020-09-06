@@ -291,9 +291,19 @@
         "newTitle": "The Millionaire Detective - Balance- UNLIMITED",
         "parentPath": "\\\\192.168.0.100\\Currently Airing Anime"
     },
-    {
-        "originalTitle": "STAR TREK LOWER DECKS",
-        "newTitle": "Star Trek - Lower Decks",
-        "parentPath": "\\\\192.168.0.100\\tv"
-    }
+  {
+    "originalTitle": "STAR TREK LOWER DECKS",
+    "newTitle": "Star Trek - Lower Decks",
+    "parentPath": "\\\\192.168.0.100\\tv"
+  },
+  {
+    "originalTitle": "GRANBLUE FANTASY THE ANIMATION S2",
+    "newTitle": "Granblue Fantasy The Animation",
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime"
+  },
+  {
+    "originalTitle": "AGGRETSUKO",
+    "newTitle": "Aggretsuko",
+    "parentPath": "\\\\192.168.0.100\\Anime TV"
+  }
 ]
