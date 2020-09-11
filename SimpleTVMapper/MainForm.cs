@@ -143,6 +143,8 @@ namespace SimpleTVMapper
         {
 
             lstFiles.Items.Clear();
+            renameProgressBar.Value = renameProgressBar.Maximum;
+            txtLog.AppendText("--- READY ---" + System.Environment.NewLine);
 
             //List all files in directory, exclude filtered extensions
             string[] fileList = pConfig.GetFileList(pConfig.SourcePath);
@@ -285,6 +287,24 @@ namespace SimpleTVMapper
         private void btnRename_Click(object sender, EventArgs e)
         {
             this.Enabled = false;
+
+            int renameCount = 0;
+
+            foreach (ListViewItem lvi in lstFiles.Items)
+            {
+                if (lvi.SubItems[4].Text != "NOMAPPING")
+                {
+                    renameCount++;
+                }
+            }
+
+            renameProgressBar.Enabled = true;
+            renameProgressBar.Minimum = 0;
+            renameProgressBar.Maximum = renameCount;
+            renameProgressBar.Value = 0;
+
+            int renameCompleteCount = 0;
+
             foreach ( ListViewItem lvi in lstFiles.Items)
             {
                 if (lvi.SubItems[4].Text != "NOMAPPING")
@@ -296,7 +316,10 @@ namespace SimpleTVMapper
                     }
                     if (!File.Exists(lvi.SubItems[4].Text))
                     {
-                        System.IO.File.Move(lvi.SubItems[0].Text, lvi.SubItems[4].Text);
+                        //System.IO.File.Move(lvi.SubItems[0].Text, lvi.SubItems[4].Text);
+                        txtLog.AppendText("Renamed " + lvi.SubItems[0].Text + " -> " + lvi.SubItems[4].Text + System.Environment.NewLine);
+                        renameCompleteCount++;
+                        renameProgressBar.Value = renameCompleteCount;
                     }
                     else
                     {
@@ -305,6 +328,7 @@ namespace SimpleTVMapper
                 }
             }
 
+            txtLog.AppendText("Renaming complete!" + System.Environment.NewLine);
             cleanupLeftoverDirs();
 
             this.Enabled = true;
