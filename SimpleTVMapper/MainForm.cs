@@ -316,7 +316,7 @@ namespace SimpleTVMapper
                     }
                     if (!File.Exists(lvi.SubItems[4].Text))
                     {
-                        //System.IO.File.Move(lvi.SubItems[0].Text, lvi.SubItems[4].Text);
+                        System.IO.File.Move(lvi.SubItems[0].Text, lvi.SubItems[4].Text);
                         txtLog.AppendText("Renamed " + lvi.SubItems[0].Text + " -> " + lvi.SubItems[4].Text + System.Environment.NewLine);
                         renameCompleteCount++;
                         renameProgressBar.Value = renameCompleteCount;
