@@ -334,5 +334,11 @@ namespace SimpleTVMapper
             this.Enabled = true;
             loadAndPopulateListView();
         }
+
+        private void btnMappings_Click(object sender, EventArgs e)
+        {
+            MappingsEditor mappingsEditor = new MappingsEditor();
+            mappingsEditor.ShowDialog(this);
+        }
     }
 }
