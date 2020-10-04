@@ -325,5 +325,20 @@
     "originalTitle": "ARCHER 2009",
     "newTitle": "Archer (2009)",
     "parentPath": "\\\\192.168.0.100\\tv"
+  },
+  {
+    "originalTitle": "BOBS BURGERS",
+    "newTitle": "Bob's Burgers",
+    "parentPath": "\\\\192.168.0.100\\tv"
+  },
+  {
+    "originalTitle": "FAMILY GUY",
+    "newTitle": "Family Guy",
+    "parentPath": "\\\\192.168.0.100\\tv"
+  },
+  {
+    "originalTitle": "THE SIMPSONS",
+    "newTitle": "The Simpsons",
+    "parentPath": "\\\\192.168.0.100\\tv2"
   }
 ]
