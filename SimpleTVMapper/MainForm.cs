@@ -334,5 +334,22 @@ namespace SimpleTVMapper
             this.Enabled = true;
             loadAndPopulateListView();
         }
+
+        private void lstFiles_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                var focusedItem = lstFiles.FocusedItem;
+                if (focusedItem != null && focusedItem.Bounds.Contains(e.Location))
+                {
+                    copyMenu.Show(Cursor.Position);
+                }
+            }
+        }
+
+        private void copyTitleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(lstFiles.SelectedItems[0].SubItems[1].Text);
+        }
     }
 }
