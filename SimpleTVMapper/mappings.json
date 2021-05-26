@@ -253,6 +253,11 @@
     "parentPath": "\\\\192.168.0.100\\Currently Airing Anime"
   },
   {
+    "originalTitle": "SUPERMAN AND LOIS",
+    "newTitle": "Superman & Lois",
+    "parentPath": "\\\\192.168.0.100\\tv2"
+  },
+  {
     "originalTitle": "WHOSE LINE IS IT ANYWAY US",
     "newTitle": "Whose Line is it Anyway (US)",
     "newSeason": 16,
