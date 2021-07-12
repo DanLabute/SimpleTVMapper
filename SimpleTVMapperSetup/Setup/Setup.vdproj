@@ -15,20 +15,20 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_312E9C5ED61C4E0F8D85F114A21D618D"
+        "MsmKey" = "8:_0AFF01623B7141698C37E1319EE817F7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_3136532AE1D67AEDFDAF7872949C75B1"
-        "OwnerKey" = "8:_312E9C5ED61C4E0F8D85F114A21D618D"
+        "OwnerKey" = "8:_0AFF01623B7141698C37E1319EE817F7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_387386BDEE035A9DD24439C908D787C0"
-        "OwnerKey" = "8:_312E9C5ED61C4E0F8D85F114A21D618D"
+        "OwnerKey" = "8:_0AFF01623B7141698C37E1319EE817F7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -46,7 +46,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_312E9C5ED61C4E0F8D85F114A21D618D"
+        "OwnerKey" = "8:_0AFF01623B7141698C37E1319EE817F7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -443,7 +443,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_312E9C5ED61C4E0F8D85F114A21D618D"
+            "Target" = "8:"
             "Folder" = "8:_7574D92D11C149B491293871B72F8934"
             "WorkingFolder" = "8:_AC3AB3957AB4438EA22B4C3FF3D78476"
             "Icon" = "8:_8A011B06B7024AF5910D35BF947162EE"
@@ -457,7 +457,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_312E9C5ED61C4E0F8D85F114A21D618D"
+            "Target" = "8:"
             "Folder" = "8:_1B4B54082454406BB07F54D8FB0BAB5B"
             "WorkingFolder" = "8:_AC3AB3957AB4438EA22B4C3FF3D78476"
             "Icon" = "8:_8A011B06B7024AF5910D35BF947162EE"
@@ -862,7 +862,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_312E9C5ED61C4E0F8D85F114A21D618D"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_0AFF01623B7141698C37E1319EE817F7"
             {
             "SourcePath" = "8:..\\..\\SimpleTVMapper\\obj\\Debug\\SimpleTVMapper.exe"
             "TargetName" = "8:"
