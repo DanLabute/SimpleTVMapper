@@ -1,14 +1,24 @@
 [
   {
+    "originalTitle": "",
+    "newTitle": "",
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Summer 2021"
+  },
+  {
+    "originalTitle": "NIGHT HEAD 2041",
+    "newTitle": "Night Head 2041",
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Summer 2021"
+  },
+  {
+    "originalTitle": "MEGAMI-RYOU NO RYOUBO-KUN",
+    "newTitle": "Mother of the Goddess' Dormitory",
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Summer 2021"
+  },
+  {
     "originalTitle": "TENSEI SHITARA SLIME DATTA KEN",
     "newTitle": "That Time I Got Reincarnated as a Slime",
     "newSeason": 2,
     "episodeCountOffset": 24,
-    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Summer 2021"
-  },
-  {
-    "originalTitle": "",
-    "newTitle": "",
     "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Summer 2021"
   },
   {
