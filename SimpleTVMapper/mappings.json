@@ -5,6 +5,16 @@
     "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Summer 2021"
   },
   {
+    "originalTitle": "LOVE LIVE! SUPERSTAR!!",
+    "newTitle": "Love Live! Superstar!!",
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Summer 2021"
+  },
+  {
+    "originalTitle": "DEATTE 5-BYOU DE BATTLE",
+    "newTitle": "Battle Game in 5 Seconds",
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Summer 2021"
+  },
+  {
     "originalTitle": "YAMI SHIBAI 9",
     "newTitle": "Yamishibai Japanese Ghost Stories",
     "newSeason": 9,
@@ -155,16 +165,27 @@
     "originalTitle": "IDOLISH7 S3",
     "newTitle": "IDOLiSH7",
     "newSeason": 3,
-    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime"
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Summer 2021"
   },
   {
     "originalTitle": "MAIKO-SAN CHI NO MAKANAI-SAN",
     "newTitle": "Kiyo in Kyoto - From the Maiko House",
-    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime"
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Summer 2021"
   },
   {
     "originalTitle": "ZOMBIELAND SAGA S2",
     "newTitle": "Zombie Land Saga",
+    "newSeason": 2,
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime"
+  },
+  {
+    "originalTitle": "FRUITS BASKET (2019)",
+    "newTitle": "Fruits Basket (2019)",
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime"
+  },
+  {
+    "originalTitle": "FRUITS BASKET (2019) S2",
+    "newTitle": "Fruits Basket (2019)",
     "newSeason": 2,
     "parentPath": "\\\\192.168.0.100\\Currently Airing Anime"
   },
@@ -177,7 +198,7 @@
   {
     "originalTitle": "DIGIMON ADVENTURE (2020)",
     "newTitle": "Digimon Adventure (2020)",
-    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime"
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Summer 2021"
   },
   {
     "originalTitle": "86 - EIGHTY SIX",
@@ -202,7 +223,7 @@
   {
     "originalTitle": "BLUE REFLECTION RAY",
     "newTitle": "Blue Reflection Ray",
-    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime"
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Summer 2021"
   },
   {
     "originalTitle": "BISHOUNEN TANTEIDAN",
@@ -214,7 +235,7 @@
     "newTitle": "My Hero Academia",
     "newSeason": 5,
     "episodeCountOffset": 88,
-    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime"
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Summer 2021"
   },
   {
     "originalTitle": "CARDFIGHT!! VANGUARD OVERDRESS",
@@ -249,7 +270,7 @@
   {
     "originalTitle": "FUMETSU NO ANATA E",
     "newTitle": "To Your Eternity",
-    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime"
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Summer 2021"
   },
   {
     "originalTitle": "HETALIA WORLD STARS",
@@ -302,7 +323,7 @@
     "originalTitle": "MAIRIMASHITA! IRUMA-KUN S2",
     "newTitle": "Welcome to Demon School! Iruma-kun",
     "newSeason": 2,
-    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime"
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Summer 2021"
   },
   {
     "originalTitle": "MARS RED",
@@ -389,12 +410,12 @@
   {
     "originalTitle": "TOKYO REVENGERS",
     "newTitle": "Tokyo Revengers",
-    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime"
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Summer 2021"
   },
   {
     "originalTitle": "TROPICAL-ROUGE! PRECURE",
     "newTitle": "Tropical-Rouge! Precure",
-    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime"
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Summer 2021"
   },
   {
     "originalTitle": "VIVY - FLUORITE EYE'S SONG",
