@@ -13,7 +13,7 @@ namespace SimpleNameMapper.Classes
     {
         public string SourcePath = @"\\192.168.0.100\Torrents";
 
-        public string allowedFileExtensions = @".*[.mkv, .mp4]$";
+        public string allowedFileExtensions = @".*[.mkv, .mp4, .avi]$";
 
         public string[] GetFileList(string path)
         {
