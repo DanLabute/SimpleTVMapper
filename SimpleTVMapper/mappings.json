@@ -5,6 +5,11 @@
     "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Summer 2021"
   },
   {
+    "originalTitle": "HEION SEDAI NO IDATEN-TACHI",
+    "newTitle": "The Idaten Deities Know Only Peace",
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Summer 2021"
+  },
+  {
     "originalTitle": "OBEY ME!",
     "newTitle": "Obey Me!",
     "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Summer 2021"
@@ -524,5 +529,10 @@
     "originalTitle": "RICK AND MORTY",
     "newTitle": "Rick and Morty",
     "parentPath": "\\\\192.168.0.100\\tv2"
+  },
+  {
+    "originalTitle": "ADVENTURE TIME",
+    "newTitle": "Adventure Time",
+    "parentPath": "\\\\192.168.0.100\\tv"
   }
 ]
