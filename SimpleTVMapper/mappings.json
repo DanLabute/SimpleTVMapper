@@ -5,6 +5,11 @@
     "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Summer 2021"
   },
   {
+    "originalTitle": "THE DEFECTIVE",
+    "newTitle": "The Defective",
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Summer 2021"
+  },
+  {
     "originalTitle": "MAGIA RECORD S2",
     "newTitle": "Magia Record - Puella Magi Madoka Magica Side Story",
     "newSeason": 2,
@@ -504,7 +509,7 @@
   {
     "originalTitle": "STAR TREK LOWER DECKS",
     "newTitle": "Star Trek - Lower Decks",
-    "parentPath": "\\\\192.168.0.100\\tv"
+    "parentPath": "\\\\192.168.0.100\\tv2"
   },
   {
     "originalTitle": "ARCHER",
@@ -545,5 +550,15 @@
     "originalTitle": "ADVENTURE TIME",
     "newTitle": "Adventure Time",
     "parentPath": "\\\\192.168.0.100\\tv"
+  },
+  {
+    "originalTitle": "BROOKLYN NINE-NINE",
+    "newTitle": "Brooklyn Nine-Nine",
+    "parentPath": "\\\\192.168.0.100\\tv"
+  },
+  {
+    "originalTitle": "RIVERDALE US",
+    "newTitle": "Riverdale",
+    "parentPath": "\\\\192.168.0.100\\tv2"
   }
 ]
