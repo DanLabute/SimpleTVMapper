@@ -5,6 +5,34 @@
     "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Fall 2021"
   },
   {
+    "originalTitle": "HACHIGATSU NO CINDERELLA NINE",
+    "newTitle": "Cinderella Nine",
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Fall 2021"
+  },
+  {
+    "originalTitle": "YUUKI YUUNA WA YUUSHA DE ARU - DAI MANKAI NO SHOU",
+    "newTitle": "Yuki Yuna Is a Hero",
+    "newSeason": 3,
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Fall 2021"
+  },
+  {
+    "originalTitle": "YAKUNARA MUG CUP MO S2",
+    "newTitle": "Let's Make a Mug Too",
+    "newSeason": 2,
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Fall 2021"
+  },
+  {
+    "originalTitle": "SELECTION PROJECT",
+    "newTitle": "Selection Project",
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Fall 2021"
+  },
+  {
+    "originalTitle": "ISEKAI SHOKUDOU S2",
+    "newTitle": "Restaurant to Another World",
+    "newSeason": 2,
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Fall 2021"
+  },
+  {
     "originalTitle": "GANBARE DOUKI-CHAN",
     "newTitle": "Senpai Is Mine",
     "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Fall 2021"
@@ -69,13 +97,6 @@
   {
     "originalTitle": "MEGAMI-RYOU NO RYOUBO-KUN",
     "newTitle": "Mother of the Goddess' Dormitory",
-    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Summer 2021"
-  },
-  {
-    "originalTitle": "TENSEI SHITARA SLIME DATTA KEN",
-    "newTitle": "That Time I Got Reincarnated as a Slime",
-    "newSeason": 2,
-    "episodeCountOffset": 24,
     "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Summer 2021"
   },
   {
