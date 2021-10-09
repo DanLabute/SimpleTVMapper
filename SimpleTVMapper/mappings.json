@@ -5,6 +5,16 @@
     "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Fall 2021"
   },
   {
+    "originalTitle": "TAISHOU OTOME OTOGIBANASHI",
+    "newTitle": "Taisho Otome Fairy Tale",
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Fall 2021"
+  },
+  {
+    "originalTitle": "VISUAL PRISON",
+    "newTitle": "Visual Prison",
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Fall 2021"
+  },
+  {
     "originalTitle": "DROWNING SORROWS IN RAGING FIRE",
     "newTitle": "Drowning Sorrows in Raging Fire",
     "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Fall 2021"
@@ -706,6 +716,11 @@
   {
     "originalTitle": "RIVERDALE US",
     "newTitle": "Riverdale",
+    "parentPath": "\\\\192.168.0.100\\tv2"
+  },
+  {
+    "originalTitle": "YOUNG SHELDON",
+    "newTitle": "Young Sheldon",
     "parentPath": "\\\\192.168.0.100\\tv2"
   }
 ]
