@@ -5,6 +5,17 @@
     "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Fall 2021"
   },
   {
+    "originalTitle": "LUPIN III - PART 6",
+    "newTitle": "Lupin III",
+    "newSeason": 6,
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Fall 2021"
+  },
+  {
+    "originalTitle": "KOMI-SAN WA, COMYUSHOU DESU",
+    "newTitle": "Komi Can't Communicate",
+    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Fall 2021"
+  },
+  {
     "originalTitle": "KIMETSU NO YAIBA - MUGEN RESSHA-HEN",
     "newTitle": "The Demon Slayer - Kimetsu no Yaiba Mugen Train Arc TV",
     "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Fall 2021"
@@ -776,5 +787,10 @@
     "originalTitle": "YOUNG SHELDON",
     "newTitle": "Young Sheldon",
     "parentPath": "\\\\192.168.0.100\\tv2"
+  },
+  {
+    "originalTitle": "HEARTLAND CA",
+    "newTitle": "Heartland (2007) (CA)",
+    "parentPath": "\\\\192.168.0.100\\tv"
   }
 ]
