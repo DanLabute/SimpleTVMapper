@@ -813,5 +813,10 @@
     "originalTitle": "STAR TREK DISCOVERY",
     "newTitle": "Star Trek - Discovery",
     "parentPath": "\\\\192.168.0.100\\tv2"
+  },
+  {
+    "originalTitle": "STAR TREK PRODIGY",
+    "newTitle": "Star Trek - Prodigy",
+    "parentPath": "\\\\192.168.0.100\\tv2"
   }
 ]
