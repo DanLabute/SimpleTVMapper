@@ -219,10 +219,13 @@ namespace SimpleTVMapper
 
                         if (m.episodeCountOffset != null)
                         {
-                            newEpisode = (Int32.Parse(newEpisode) - Int32.Parse(m.episodeCountOffset)).ToString();
-                            if (newEpisode.Length == 1)
+                            if (m.episodeCountOffset != "")
                             {
-                                newEpisode = "0" + newEpisode;
+                                newEpisode = (Int32.Parse(newEpisode) - Int32.Parse(m.episodeCountOffset)).ToString();
+                                if (newEpisode.Length == 1)
+                                {
+                                    newEpisode = "0" + newEpisode;
+                                }
                             }
                         }
 
