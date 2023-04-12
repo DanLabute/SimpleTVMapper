@@ -39,7 +39,7 @@ namespace SimpleTVMapper
 
         string determineSeason(string fileName)
         {
-            Match seasonMatch = Regex.Match(fileName, @"[Ss](\d+)");
+            Match seasonMatch = Regex.Match(fileName, @"[Ss](\d+)|^.*?(\d\d\d\d)(?!p)");
             String seasonString = "";
             if (seasonMatch.Success)
             {
@@ -106,7 +106,7 @@ namespace SimpleTVMapper
         {
             Match showTitleMatch = null;
 
-            showTitleMatch = Regex.Match(fileName, @"^(?<showNameAnime>.*?) - \d|^(?<showNameTV>.*?)[Ss]\d\d");
+            showTitleMatch = Regex.Match(fileName, @"^(?<showNameAnime>.*?) - \d|^(?<showNameTV>.*?)[Ss]\d\d|^(?<showNameDailyTV>.*?)\d\d\d\d");
 
             if (showTitleMatch.Success)
             {
@@ -119,6 +119,11 @@ namespace SimpleTVMapper
                 if (showTitleMatch.Groups["showNameTV"].Value != "")
                 {
                     showTitle = showTitleMatch.Groups["showNameTV"].Value.Replace(".", " ").Trim();
+                }
+
+                if (showTitleMatch.Groups["showNameDailyTV"].Value != "")
+                {
+                    showTitle = showTitleMatch.Groups["showNameDailyTV"].Value.Replace(".", " ").Trim();
                 }
                 return showTitle.ToUpper();
             }
