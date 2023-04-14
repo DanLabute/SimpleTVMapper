@@ -7,11 +7,19 @@
     "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Fall 2021"
   },
   {
-    "originalTitle": "",
-    "newTitle": "",
-    "newSeason": "",
-    "episodeCountOffset": "",
-    "parentPath": "\\\\192.168.0.100\\Currently Airing Anime\\Fall 2021"
+    "originalTitle": "ABBOTT ELEMENTARY",
+    "newTitle": "Abbott Elementary",
+    "parentPath": "\\\\192.168.0.100\\tv"
+  },
+  {
+    "originalTitle": "STAR TREK PICARD",
+    "newTitle": "Star Trek - Picard",
+    "parentPath": "\\\\192.168.0.100\\tv2"
+  },
+  {
+    "originalTitle": "YELLOWJACKETS",
+    "newTitle": "Yellowjackets",
+    "parentPath": "\\\\192.168.0.100\\tv2"
   },
   {
     "originalTitle": "SUPERMAN AND LOIS",
@@ -123,6 +131,73 @@
   {
     "originalTitle": "THE MARGINAL SERVICE",
     "newTitle": "The Marginal Service",
+    "parentPath": "\\\\192.168.0.100\\Anime Currently Airing"
+  },
+  {
+    "originalTitle": "BOFURI S2",
+    "newTitle": "BOFURI I Don’t Want to Get Hurt, so I’ll Max Out My Defense",
+    "parentPath": "\\\\192.168.0.100\\Anime Currently Airing"
+  },
+  {
+    "originalTitle": "DR  STONE S3",
+    "newTitle": "Dr. Stone",
+    "parentPath": "\\\\192.168.0.100\\Anime Currently Airing"
+  },
+  {
+    "originalTitle": "KAMINAKI SEKAI NO KAMISAMA KATSUDOU",
+    "newTitle": "KamiKatsu Working for God in a Godless World",
+    "parentPath": "\\\\192.168.0.100\\Anime Currently Airing"
+  },
+  {
+    "originalTitle": "KONO SUBARASHII SEKAI NI BAKUEN WO!",
+    "newTitle": "KonoSuba – An Explosion on This Wonderful World!",
+    "parentPath": "\\\\192.168.0.100\\Anime Currently Airing"
+  },
+  {
+    "originalTitle": "MAHOUTSUKAI NO YOME S2",
+    "newTitle": "The Ancient Magus' Bride",
+    "parentPath": "\\\\192.168.0.100\\Anime Currently Airing"
+  },
+  {
+    "originalTitle": "MAJUTSUSHI ORPHEN HAGURE TABI S4",
+    "newTitle": "Sorcerous Stabber Orphen (2020)",
+    "newSeason": 3,
+    "episodeCountOffset": -12,
+    "parentPath": "\\\\192.168.0.100\\Anime Currently Airing"
+  },
+  {
+    "originalTitle": "OPUS COLORS",
+    "newTitle": "Opus Colors",
+    "parentPath": "\\\\192.168.0.100\\Anime Currently Airing"
+  },
+  {
+    "originalTitle": "OSHI NO KO",
+    "newTitle": "Oshi no Ko",
+    "parentPath": "\\\\192.168.0.100\\Anime Currently Airing"
+  },
+  {
+    "originalTitle": "OUSAMA RANKING - YUUKI NO TAKARABAKO",
+    "newTitle": "Ranking of Kings The Treasure Chest of Courage",
+    "parentPath": "\\\\192.168.0.100\\Anime Currently Airing"
+  },
+  {
+    "originalTitle": "THE IDOLM@STER CINDERELLA GIRLS - U149",
+    "newTitle": "THE iDOLM@STER Cinderella Girls U149",
+    "parentPath": "\\\\192.168.0.100\\Anime Currently Airing"
+  },
+  {
+    "originalTitle": "X AND Y",
+    "newTitle": "X&Y",
+    "parentPath": "\\\\192.168.0.100\\Anime Currently Airing"
+  },
+  {
+    "originalTitle": "WATASHI NO YURI WA OSHIGOTO DESU!",
+    "newTitle": "Yuri Is My Job!",
+    "parentPath": "\\\\192.168.0.100\\Anime Currently Airing"
+  },
+  {
+    "originalTitle": "YUUSHA GA SHINDA!",
+    "newTitle": "The Legendary Hero Is Dead!",
     "parentPath": "\\\\192.168.0.100\\Anime Currently Airing"
   }
 ]
